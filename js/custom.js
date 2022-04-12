@@ -9,11 +9,12 @@ $(document).on("scroll", function(){
     } else {
         $(".primary-nav").removeClass("shrink");
         $(".logo").removeClass("shrink-logo");
+        $('.show').css('background-color', '#ffc938');
         $('.navbar').css('background-color', 'transparent');
+       
     }
 
 });
-
 
 
 $(document).ready(function() {
@@ -46,11 +47,5 @@ $(document).ready(function() {
 
 const d = new Date()
 const year = d.getFullYear();
-
-const year_to_append = document.getElementById('year')
-
-console.log(year_to_append)
-
+const year_to_append = document.getElementById('year');
 year_to_append.append(`${year}`);
-
-console.log(year);
