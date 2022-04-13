@@ -49,3 +49,22 @@ const d = new Date()
 const year = d.getFullYear();
 const year_to_append = document.getElementById('year');
 year_to_append.append(`${year}`);
+
+
+let navbar_toggler = document.querySelector(".navbar-toggler");
+
+
+navbar_toggler.addEventListener("click",()=>{
+   let expanded_aria = navbar_toggler.getAttribute('aria-expanded');
+  
+   if(expanded_aria === 'false'){
+
+        $(".header-content h4").css('filter', 'blur(10px)'); 
+        $(".header-content h1").css('filter', 'blur(10px)');
+
+   }else if(expanded_aria === 'true'){
+        $(".header-content h4").css('filter', 'blur(0px)');
+        $(".header-content h1").css('filter', 'blur(0px)');
+        
+   }
+})
